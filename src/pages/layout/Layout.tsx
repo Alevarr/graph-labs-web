@@ -1,20 +1,17 @@
-import { Outlet, useHref, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import NavBar from "../../components/layout/NavBar/NavBar";
-import { NextUIProvider } from "@nextui-org/react";
+import Providers from "./Providers";
 
 function Layout() {
-  const navigate = useNavigate();
-  return (
-    <>
-      <NextUIProvider navigate={navigate} useHref={useHref}>
-        <NavBar />
-        {/* substract header navbar height */}
-        <div className="w-full h-screen-without-navbar p-5 bg-almost-white">
-          <Outlet />
-        </div>
-      </NextUIProvider>
-    </>
-  );
+	return (
+		<Providers>
+			<NavBar />
+			{/* substract header navbar height */}
+			<div className="w-full min-h-screen-without-navbar p-5 bg-almost-white">
+				<Outlet />
+			</div>
+		</Providers>
+	);
 }
 
 export default Layout;

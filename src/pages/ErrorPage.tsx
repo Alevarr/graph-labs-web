@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     <>
       <NavBar />
-      <div className="w-full h-screen flex items-center justify-center">
+      <div className="w-full h-screen flex items-center justify-center bg-almost-white">
         <h1 className="text-5xl">
           {isRouteErrorResponse(error)
             ? "Wrong url bro"

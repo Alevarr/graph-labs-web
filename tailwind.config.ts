@@ -12,15 +12,16 @@ export default {
       center: true,
     },
     extend: {
-      height: {
+      minHeight: {
         "screen-without-navbar": "calc(100vh - 64px)",
       },
       colors: {
-        "almost-white": "#f9f9f9"
+        "almost-white": "#f9f9f9",
       },
       boxShadow: {
-        "ambient-white": "2px 2px 20px rgba(0, 0, 0, 0.1), -10px -10px 10px white"
-      }
+        "ambient-white":
+          "2px 2px 20px rgba(0, 0, 0, 0.1), -10px -10px 10px white",
+      },
     },
   },
   darkMode: "class",
