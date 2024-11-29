@@ -13,6 +13,7 @@ import CreateTaskPage from "./pages/CreateTaskPage";
 import TasksCatalogPage from "./pages/TasksCatalogPage";
 import CompletionResultsPage from "./pages/CompletionResultsPage";
 import TrainingTasksPage from "./pages/TrainingTasksPage";
+import NoLayout from "./pages/layout/NoLayout";
 
 const router = createBrowserRouter([
 	{
@@ -30,7 +31,6 @@ const router = createBrowserRouter([
 				path: APP_ROUTES.admin.index,
 				children: [
 					{ index: true, element: <AdminPage /> },
-					{ path: APP_ROUTES.admin.createTask, element: <CreateTaskPage /> },
 					{
 						path: APP_ROUTES.admin.tasksCatalog,
 						element: <TasksCatalogPage />,
@@ -54,6 +54,21 @@ const router = createBrowserRouter([
 		children: [
 			{ path: APP_ROUTES.authentication.signIn, element: <SignInPage /> },
 			{ path: APP_ROUTES.authentication.signUp, element: <SignUpPage /> },
+			
+		],
+	},
+	{
+		path: "/",
+		element: <NoLayout />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				path: APP_ROUTES.admin.index,
+				children: [
+					{ path: APP_ROUTES.admin.createTask, element: <CreateTaskPage /> },
+					
+				],
+			},
 		],
 	},
 ]);

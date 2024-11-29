@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@iconify/react": "^5.0.2",
     "@nextui-org/react": "^2.4.8",
     "classnames": "^2.5.1",
     "cytoscape": "^3.28.1",
